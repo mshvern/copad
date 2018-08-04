@@ -1,0 +1,614 @@
+[[[[[ ~/work/current/other/meteor ]]]]]
+
+=> Started proxy.
+[[[[[ ~/work/current/other/meteor ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3000/
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building for web.browser:
+   imports/ui/App.js:37:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Only one default
+   export allowed per module. (37:0)
+   
+   35 | }
+   36 | 
+   > 37 | export default withTracker(() => {
+   | ^
+   38 |     return {
+   39 |       tasks: Tasks.find({}).fetch(),
+   40 |     };
+   
+   While building for web.browser.legacy:
+   imports/ui/App.js:37:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Only one default
+   export allowed per module. (37:0)
+   
+   35 | }
+   36 | 
+   > 37 | export default withTracker(() => {
+   | ^
+   38 |     return {
+   39 |       tasks: Tasks.find({}).fetch(),
+   40 |     };
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:41:26.197(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:41:26.241(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:41:26.241(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:41:26.241(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:41:26.242(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:41:26.242(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:41:26.242(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:41:26.242(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:41:32.009(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:41:32.010(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:41:32.010(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:41:32.010(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:41:32.010(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:41:32.011(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:41:32.011(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:41:32.011(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:41:47.181(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:41:47.182(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:41:47.182(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:41:47.183(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:41:47.183(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:41:47.183(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:41:47.183(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:41:47.184(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:42:14.250(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:42:14.251(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:42:14.252(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:42:14.253(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:42:14.255(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:42:14.256(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:42:14.258(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:42:14.259(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:42:16.387(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:42:16.388(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:42:16.388(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:42:16.388(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:42:16.389(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:42:16.389(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:42:16.389(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:42:16.389(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:54:35.723(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:54:35.724(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:54:35.724(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:54:35.725(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:54:35.725(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:54:35.725(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:54:35.725(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:54:35.725(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:54:58.868(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:54:58.868(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:54:58.869(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:54:58.869(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:54:58.869(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:54:58.870(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:54:58.870(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:54:58.870(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:55:04.362(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:55:04.363(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:55:04.363(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:55:04.363(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:55:04.363(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:55:04.364(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:55:04.364(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:55:04.364(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:55:49.850(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:55:49.851(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:55:49.851(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:55:49.851(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:55:49.851(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:55:49.852(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:55:49.852(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:55:49.852(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:57:12.334(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:57:12.335(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:57:12.335(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:57:12.335(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:57:12.335(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:57:12.336(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:57:12.336(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:57:12.336(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:57:22.684(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:57:22.685(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:57:22.685(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:57:22.685(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:57:22.686(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:57:22.686(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:57:22.686(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:57:22.687(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   [34mW20180803-14:59:36.311(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:59:36.312(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:59:36.313(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:59:36.316(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:59:36.317(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:59:36.317(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:59:36.318(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:59:36.318(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-14:59:39.103(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-14:59:39.103(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-14:59:39.103(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-14:59:39.104(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-14:59:39.104(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:59:39.104(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-14:59:39.104(3)? (STDERR) [39m[35m[39m
+[34mW20180803-14:59:39.104(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:00:19.271(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:00:19.271(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:00:19.272(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:00:19.272(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:00:19.272(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:00:19.272(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:00:19.272(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:00:19.273(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building for web.browser:
+   imports/ui/App.js:85:68:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Unexpected token
+   (85:68)
+   
+   83 |   return {
+   84 |     tasks: Tasks.find({}, { sort: { checked: 1, createdAt: -1 }
+   }).fetch(),
+   > 85 |     incompleteCount: Tasks.find({ checked: { $ne: true }
+   }).count(),,
+   |                                                                     ^
+   86 |     currentUser: Meteor.user(),
+   87 |   }
+   88 | })(App)
+   
+   While building for web.browser.legacy:
+   imports/ui/App.js:85:68:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Unexpected token
+   (85:68)
+   
+   83 |   return {
+   84 |     tasks: Tasks.find({}, { sort: { checked: 1, createdAt: -1 }
+   }).fetch(),
+   > 85 |     incompleteCount: Tasks.find({ checked: { $ne: true }
+   }).count(),,
+   |                                                                     ^
+   86 |     currentUser: Meteor.user(),
+   87 |   }
+   88 | })(App)
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+[34mW20180803-15:00:50.175(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:00:50.176(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:00:50.176(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:00:50.176(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:00:50.177(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:00:50.177(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:00:50.177(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:00:50.177(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building for web.browser:
+   imports/ui/App.js:66:10:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Adjacent JSX
+   elements must be wrapped in an enclosing tag. Did you want a JSX fragment
+   <>...</>? (66:10)
+   
+   64 |             Hide Completed Tasks
+   65 |           </label>
+   > 66 |           <form className="new-task"
+   onSubmit={this.handleSubmit.bind(this)} >
+   |           ^
+   67 |             <input
+   68 |               type="text"
+   69 |               ref="textInput"
+   
+   While building for web.browser.legacy:
+   imports/ui/App.js:66:10:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Adjacent JSX
+   elements must be wrapped in an enclosing tag. Did you want a JSX fragment
+   <>...</>? (66:10)
+   
+   64 |             Hide Completed Tasks
+   65 |           </label>
+   > 66 |           <form className="new-task"
+   onSubmit={this.handleSubmit.bind(this)} >
+   |           ^
+   67 |             <input
+   68 |               type="text"
+   69 |               ref="textInput"
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building for web.browser:
+   imports/ui/App.js:66:10:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Adjacent JSX
+   elements must be wrapped in an enclosing tag. Did you want a JSX fragment
+   <>...</>? (66:10)
+   
+   64 |             Hide Completed Tasks
+   65 |           </label>
+   > 66 |           <form className="new-task"
+   onSubmit={this.handleSubmit.bind(this)} >
+   |           ^
+   67 |             <input
+   68 |               type="text"
+   69 |               ref="textInput"
+   
+   While building for web.browser.legacy:
+   imports/ui/App.js:66:10:
+   /home/mshvern/work/current/other/meteor/imports/ui/App.js: Adjacent JSX
+   elements must be wrapped in an enclosing tag. Did you want a JSX fragment
+   <>...</>? (66:10)
+   
+   64 |             Hide Completed Tasks
+   65 |           </label>
+   > 66 |           <form className="new-task"
+   onSubmit={this.handleSubmit.bind(this)} >
+   |           ^
+   67 |             <input
+   68 |               type="text"
+   69 |               ref="textInput"
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+[34mW20180803-15:03:45.423(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:03:45.424(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:03:45.424(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:03:45.424(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:03:45.424(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:03:45.424(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:03:45.425(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:03:45.425(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:04:55.865(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:04:55.866(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:04:55.866(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:04:55.867(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:04:55.867(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:04:55.867(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:04:55.868(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:04:55.868(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:05:14.092(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:05:14.093(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:05:14.093(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:05:14.093(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:05:14.093(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:05:14.094(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:05:14.094(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:05:14.094(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:14:03.079(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:14:03.081(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:14:03.081(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:14:03.081(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:14:03.081(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:14:03.082(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:14:03.082(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:14:03.082(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:14:39.172(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:14:39.173(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:14:39.173(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:14:39.174(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:14:39.174(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:14:39.174(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:14:39.174(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:14:39.175(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:21:00.824(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:21:00.825(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:21:00.826(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:21:00.826(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:21:00.826(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:21:00.826(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:21:00.827(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:21:00.827(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:21:50.165(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:21:50.166(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:21:50.166(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:21:50.167(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:21:50.167(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:21:50.167(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:21:50.167(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:21:50.167(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:22:37.193(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:22:37.194(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:22:37.194(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:22:37.194(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:22:37.194(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:22:37.195(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:22:37.195(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:22:37.195(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:23:27.111(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:23:27.112(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:23:27.112(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:23:27.112(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:23:27.112(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:23:27.113(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:23:27.113(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:23:27.114(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:30:34.116(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:30:34.117(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:30:34.117(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:30:34.118(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:30:34.118(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:30:34.118(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:30:34.119(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:30:34.119(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:30:59.274(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:30:59.275(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:30:59.276(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:30:59.276(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:30:59.276(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:30:59.277(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:30:59.277(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:30:59.277(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:31:18.137(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:31:18.138(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:31:18.138(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:31:18.138(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:31:18.138(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:31:18.139(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:31:18.139(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:31:18.139(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:31:29.392(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:31:29.393(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:31:29.393(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:31:29.393(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:31:29.393(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:31:29.394(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:31:29.394(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:31:29.394(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:31:47.260(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:31:47.261(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:31:47.261(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:31:47.262(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:31:47.262(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:31:47.262(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:31:47.263(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:31:47.263(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:39:33.782(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:39:33.783(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:39:33.783(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:39:33.783(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:39:33.784(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:39:33.784(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:39:33.784(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:39:33.784(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:39:54.313(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:39:54.314(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:39:54.314(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:39:54.315(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:39:54.315(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:39:54.315(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:39:54.315(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:39:54.316(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:40:31.934(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:40:31.935(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:40:31.935(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:40:31.935(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:40:31.936(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:40:31.936(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:40:31.936(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:40:31.936(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:40:33.761(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:40:33.763(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:40:33.765(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:40:33.767(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:40:33.768(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:40:33.769(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:40:33.770(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:40:33.772(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)
+=> Server modified -- restarting...                                   [34mW20180803-15:44:22.016(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:44:22.017(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:44:22.018(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:44:22.018(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:44:22.018(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:44:22.018(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:44:22.019(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:44:22.019(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:45:00.632(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:45:00.634(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:45:00.634(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:45:00.635(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:45:00.635(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:45:00.635(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:45:00.636(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:45:00.636(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:50:16.114(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:50:16.115(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:50:16.115(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:50:16.115(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:50:16.115(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:50:16.116(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:50:16.116(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:50:16.116(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:52:55.703(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:52:55.703(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:52:55.704(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:52:55.704(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:52:55.704(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:52:55.704(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:52:55.705(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:52:55.705(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:54:02.824(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:54:02.825(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:54:02.826(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:54:02.826(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:54:02.826(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:54:02.826(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:54:02.827(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:54:02.827(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:54:18.636(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:54:18.637(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:54:18.637(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:54:18.637(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:54:18.637(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:54:18.638(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:54:18.638(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:54:18.638(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:56:04.858(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:56:04.859(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:56:04.859(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:56:04.859(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:56:04.859(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:56:04.860(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:56:04.860(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:56:04.860(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:57:55.117(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:57:55.118(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:57:55.118(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:57:55.119(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:57:55.119(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:57:55.119(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:57:55.120(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:57:55.120(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:58:33.857(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:58:33.857(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:58:33.857(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:58:33.858(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:58:33.858(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:58:33.858(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:58:33.858(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:58:33.858(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-15:59:16.994(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-15:59:16.994(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-15:59:16.995(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-15:59:16.995(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-15:59:16.995(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:59:16.995(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-15:59:16.995(3)? (STDERR) [39m[35m[39m
+[34mW20180803-15:59:16.996(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-16:01:38.821(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-16:01:38.822(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-16:01:38.822(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-16:01:38.822(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-16:01:38.823(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:01:38.823(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-16:01:38.823(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:01:38.824(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-16:03:10.029(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-16:03:10.030(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-16:03:10.031(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-16:03:10.031(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-16:03:10.032(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:03:10.032(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-16:03:10.033(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:03:10.033(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-16:04:12.692(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-16:04:12.692(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-16:04:12.693(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-16:04:12.693(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-16:04:12.693(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:04:12.693(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-16:04:12.694(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:04:12.694(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-16:05:54.142(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-16:05:54.143(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-16:05:54.144(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-16:05:54.144(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-16:05:54.144(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:05:54.145(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-16:05:54.145(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:05:54.145(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mW20180803-16:06:18.861(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20180803-16:06:18.861(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20180803-16:06:18.862(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20180803-16:06:18.862(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20180803-16:06:18.862(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:06:18.863(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20180803-16:06:18.863(3)? (STDERR) [39m[35m[39m
+[34mW20180803-16:06:18.863(3)? (STDERR) [39m[35min the root directory of your application.[39m
+=> Meteor server restarted
