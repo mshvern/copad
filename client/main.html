@@ -2,7 +2,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script href="/packages/edemaine_sharejs-codemirror/5.22.1-alpha.3/npm/node_modules/codemirror/mode/javascript/javascript.js"></script>
   <title>Copad - Collaborative Coding Pad</title>
 </head>
 
@@ -18,5 +17,5 @@
 </body>
 
 <template name="editor">  
-  {{>sharejsCM docid=docid id="editor" onRender=config}}
+  {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode}}
 </template>  
