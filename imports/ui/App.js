@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <div className="container">
         <header>
+          {/* The value is loading when the database hasn't been loaded on the client yet */}
           {this.props.codespace
             ? <Editor source={this.props.codespace.source } id={this.props.codespace._id}/>
             : <div>loading...</div>
