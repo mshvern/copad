@@ -1,5 +1,5 @@
 {
-  "name": "meteor",
+  "name": "copad",
   "private": true,
   "scripts": {
     "start": "meteor run",
@@ -9,12 +9,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.51",
-    "bcrypt": "^3.0.0",
-    "classnames": "^2.2.6",
-    "highlight.js": "^9.12.0",
-    "meteor-node-stubs": "^0.4.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "meteor-node-stubs": "^0.4.1"
   },
   "meteor": {
     "mainModule": {
@@ -22,15 +17,5 @@
       "server": "server/main.js"
     },
     "testModule": "tests/main.js"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^5.2.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-standard": "^3.1.0"
   }
 }
