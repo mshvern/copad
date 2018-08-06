@@ -6,7 +6,7 @@
 </head>
 
 <body>  
-  <div class="container flow-text">
+  <div class="container flow-text" style="width: 500px; height: 500px;">
     <div class="row">
     <div class="col s-12">
       <h5>Copad</h5>
@@ -16,6 +16,8 @@
   </div>
 </body>
 
-<template name="editor">  
-  {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode}}
-</template>  
+<template name="editor">
+<div>
+	<textarea id="codearea"></textarea>
+</div>
+</template>
