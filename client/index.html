@@ -1,0 +1,51 @@
+<head>
+    <title>Meteor Docs!</title>
+
+</head>
+
+<body>
+    {{> main}}
+</body>
+
+<template name="main">
+    <div class="container full-height">
+        <div class="row upper">
+            <div class="col-xs-3 full-height">
+                {{> docList}}
+            </div>
+            <div class="col-xs-9 editor-container full-height">
+                <script src="https://cdn.jsdelivr.net/ace/1.2.3/min/ace.js" type="text/javascript" charset="utf-8"></script>
+                {{> editor}}
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col-xs-3">{{! placeholder}}</div>
+            <div class="col-xs-9">
+                <h3>Edit from multiple browsers for maximum wow!</h3>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="docList">
+    <h3>Pick a document...</h3>
+    <ul class="nav nav-pills nav-stacked" id="list">
+        {{#each documents}} {{> docItem}} {{/each}}
+    </ul>
+    <h3>...or start a new one:</h3>
+    <button class="btn btn-warning">New document</button>
+</template>
+
+<template name="docItem">
+    <li class="{{#if current}}active{{/if}}">
+        <a href="#">{{title}}</a>
+    </li>
+</template>
+
+<template name="editor">
+    {{#with docid}} {{> docTitle this}} {{> sharejsCM docid=this onRender=configCM id="editor"}} {{/with}}
+</template>
+
+<template name="docTitle">
+    <input class="form-control" type="text" name="title" value="{{title}}">
+</template>
