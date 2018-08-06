@@ -1,45 +1,65 @@
 <head>
-    <title>Meteor Docs!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Copad - Collaborative Code Pad</title>
 
 </head>
 
 <body>
+    <nav class="hide-on-med-and-down">
+        <div class="nav-wrapper green">
+            <a href="#" class="brand-logo center">Copad</a>
+            <ul id="nav-mobile" style="margin-left: 10em;">
+                <li>
+                    <a href="#">Github</a>
+                </li>
+                <li>
+                    <a href="#">Docker</a>
+                </li>
+                <li>
+                    <a href="#">JavaScript</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     {{> main}}
+
 </body>
 
 <template name="main">
-    <div class="container full-height">
-        <div class="row upper">
-            <div class="col-xs-3 full-height">
-                {{> docList}}
-            </div>
-            <div class="col-xs-9 editor-container full-height">
-                <script src="https://cdn.jsdelivr.net/ace/1.2.3/min/ace.js" type="text/javascript" charset="utf-8"></script>
-                {{> editor}}
-            </div>
+    <div class="container">
+        <div class="row">
+            {{> docList}}
         </div>
-        <div class="row footer">
-            <div class="col-xs-3">{{! placeholder}}</div>
-            <div class="col-xs-9">
-                <h3>Edit from multiple browsers for maximum wow!</h3>
-            </div>
+        <div class="row">
+            <script src="https://cdn.jsdelivr.net/ace/1.2.3/min/ace.js" type="text/javascript" charset="utf-8"></script>
+            {{> editor}}
+
         </div>
     </div>
 </template>
 
 <template name="docList">
-    <h3>Pick a document...</h3>
-    <ul class="nav nav-pills nav-stacked" id="list">
+    <h5>Codespaces</h5>
+    <div id="list">
         {{#each documents}} {{> docItem}} {{/each}}
-    </ul>
-    <h3>...or start a new one:</h3>
-    <button class="btn btn-warning">New document</button>
+    </div>
+    <button class="btn newcode">New Codespace</button>
 </template>
 
 <template name="docItem">
-    <li class="{{#if current}}active{{/if}}">
-        <a href="#">{{title}}</a>
-    </li>
+    <div class="row">
+        <div class="col s8 m11">
+            <a href="#" class="{{#if current}}active{{/if}}">{{title}}</a>
+        </div>
+        <div class="col s1 m1">
+            <button class="btn btn-small deletecode">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
+    </div>
 </template>
 
 <template name="editor">
@@ -47,5 +67,5 @@
 </template>
 
 <template name="docTitle">
-    <input class="form-control" type="text" name="title" value="{{title}}">
+    <input class="form-control" type="text" name="title" value="{{title}} ">
 </template>

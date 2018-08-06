@@ -1,6 +1,3 @@
-// This is what I want to work, but doesn't:
-// import "meteor/mizzao:sharejs-codemirror/node_modules/codemirror/mode/markdown/markdown.js";
-
 Template.docList.helpers({
   documents: function () {
     return Documents.find()
@@ -8,13 +5,14 @@ Template.docList.helpers({
 })
 
 Template.docList.events = {
-  'click button': function () {
+  'click .newcode': function () {
     return Documents.insert({
       title: 'untitled'
     }, function (err, id) {
       if (!id) {
         return
       }
+      if (err) { console.log(err) }
       return Session.set('document', id)
     })
   }
@@ -30,6 +28,10 @@ Template.docItem.events = {
   'click a': function (e) {
     e.preventDefault()
     return Session.set('document', this._id)
+  },
+  'click .deletecode': function (e) {
+    e.preventDefault()
+    return Documents.remove(this._id)
   }
 }
 
