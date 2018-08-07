@@ -1,3 +1,7 @@
-import {ShareJS} from 'meteor/mizzao:sharejs';
+import {ShareJS} from 'meteor/mizzao:sharejs'
+import { Mongo } from 'meteor/mongo'
+import { Meteor } from 'meteor/meteor'
+this.Documents = new Mongo.Collection('documents')
+this.Outputs = new Mongo.Collection('outputs')
 
-this.Documents = new Meteor.Collection("documents");
+if (Meteor.isServer) { this.Outputs.insert({content: 'console.log'}) }

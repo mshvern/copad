@@ -1,6 +1,7 @@
 // Define global editor so we don't have to address ShareJS API
 var codeEditor = null
 var currentlyEvaluating = false
+
 Template.docList.helpers({
   documents: function () {
     return Documents.find()
@@ -93,9 +94,15 @@ Template.editor.events = {
     frameDocument.body.appendChild(outputElement)
     frameDocument.body.appendChild(script)
     let outputDiv = document.querySelector('#outputDiv')
-    outputDiv.innerHTML = '<p class="red">Evaluating...</p>'
+    //outputDiv.innerHTML = '<p class="red">Evaluating...</p>'
     setTimeout(() => {
-      outputDiv.innerHTML = outputElement.innerHTML
+      //outputDiv.innerHTML = ''
+      if (!Outputs.findOne()) {
+        Outputs.insert({content: outputElement.innerHTML})
+      } else {
+        Outputs.update(Outputs.findOne()._id, {content: outputElement.innerHTML})
+      }
+
       currentlyEvaluating = false
     }, 0)
   },
@@ -117,5 +124,8 @@ Template.editor.helpers({
       cm.setOption('theme', 'monokai')
       return cm.setOption('indentWithTabs', true)
     }
+  },
+  output () {
+    return Outputs.findOne() ? Outputs.findOne().content : 'this is wrong'
   }
 })
