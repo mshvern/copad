@@ -1,3 +1,6 @@
+// Define global editor so we don't have to address ShareJS API
+var codeEditor = null
+var currentlyEvaluating = false
 Template.docList.helpers({
   documents: function () {
     return Documents.find()
@@ -12,7 +15,9 @@ Template.docList.events = {
       if (!id) {
         return
       }
-      if (err) { console.log(err) }
+      if (err) {
+        console.log(err)
+      }
       return Session.set('document', id)
     })
   }
@@ -60,12 +65,50 @@ Template.editor.events = {
     return Documents.update(id, {
       title: e.target.value
     })
+  },
+  'click #execute': function (e) {
+    if (currentlyEvaluating) { return }
+    currentlyEvaluating = true
+    let frame = document.querySelector('#outputFrame')
+    let frameDocument = frame.contentDocument
+    if (frameDocument.body.childNodes) {
+      for (let i of Array.from(frameDocument.body.childNodes)) {
+        i.remove()
+      }
+    }
+    let script = frameDocument.createElement('script')
+    let outputElement = frameDocument.createElement('div')
+    outputElement.id = 'outputDiv'
+
+    script.innerHTML = `setTimeout(()=>{(function executeCodeFromInneriFrame () { \n
+      let outputDiv = document.querySelector('#outputDiv')
+      outputDiv.innerHTML = ''
+      let startTime = Date.now()
+      console.log = function (message) {
+        let executionTime = Date.now() - startTime
+        outputDiv.innerHTML = '<p>(' + executionTime + ' ms): ' + message + '</p>' + outputDiv.innerHTML
+      }
+    console.error = console.debug = console.info = console.log \n` + codeEditor.getValue() + `})()}, 0)`
+
+    frameDocument.body.appendChild(outputElement)
+    frameDocument.body.appendChild(script)
+    let outputDiv = document.querySelector('#outputDiv')
+    outputDiv.innerHTML = '<p class="red">Evaluating...</p>'
+    setTimeout(() => {
+      outputDiv.innerHTML = outputElement.innerHTML
+      currentlyEvaluating = false
+    }, 0)
+  },
+  'click #clear': function (e) {
+    document.querySelector('#outputDiv').innerHTML = ''
   }
+
 }
 
 Template.editor.helpers({
   configCM: function () {
     return function (cm) {
+      codeEditor = cm
       cm.setOption('theme', 'default')
       cm.setOption('lineNumbers', true)
       cm.setOption('lineWrapping', true)

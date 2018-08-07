@@ -8,7 +8,7 @@
 
 </head>
 
-<body>
+<body class="grey darken-4 white-text">
     <nav class="hide-on-med-and-down">
         <div class="nav-wrapper green">
             <a href="#" class="brand-logo center">Copad</a>
@@ -18,9 +18,6 @@
                 </li>
                 <li>
                     <a href="#">Docker</a>
-                </li>
-                <li>
-                    <a href="#">JavaScript</a>
                 </li>
             </ul>
         </div>
@@ -43,20 +40,20 @@
 </template>
 
 <template name="docList">
-    <h5>Codespaces</h5>
+    <div class="docinstlist">Available Codespaces</div>
     <div id="list">
         {{#each documents}} {{> docItem}} {{/each}}
     </div>
-    <button class="btn newcode">New Codespace</button>
+    <button class="btn green darken-2 newcode">New Codespace</button>
 </template>
 
 <template name="docItem">
     <div class="row">
         <div class="col s8 m11">
-            <a href="#" class="{{#if current}}active{{/if}}">{{title}}</a>
+            <a href="#" class="{{#if current}}active{{/if}} docinst">{{title}}</a>
         </div>
         <div class="col s1 m1">
-            <button class="btn btn-small deletecode">
+            <button class="btn btn-small green darken-2 deletecode">
                 <i class="material-icons">close</i>
             </button>
         </div>
@@ -64,7 +61,15 @@
 </template>
 
 <template name="editor">
-    {{#with docid}} {{> docTitle this}} {{> sharejsCM docid=this onRender=configCM id="editor"}} {{/with}}
+    {{#with docid}}<div class="bordered"> {{> docTitle this}} {{> sharejsCM docid=this onRender=configCM id="editor"}}</div>
+    <button class="btn green darken-2" id="execute">Execute</button>
+    <button class="btn green darken-2" id="clear">Clear Log</button>
+    <iframe id="outputFrame" style="display: none" class="col s12"></iframe>
+    <div class="card-panel grey darken-3 col s12 bordered">
+        <p>Output: </p>
+        <div id="outputDiv" style="overflow-y:auto; height:100px;"></div>
+    </div>{{/with}}
+
 </template>
 
 <template name="docTitle">
