@@ -1,7 +1,7 @@
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
 
-import CodeMirror from "meteor/mizzao:sharejs-codemirror/node_modules/codemirror/lib/codemirror.js";
+import CodeMirror from "meteor/edemaine:sharejs-codemirror/node_modules/codemirror/lib/codemirror.js";
 /*
 (function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS

@@ -1,4 +1,4 @@
-import {ShareJS} from 'meteor/mizzao:sharejs'
+import {ShareJS} from 'meteor/edemaine:sharejs'
 import { Mongo } from 'meteor/mongo'
 import { Meteor } from 'meteor/meteor'
 this.Documents = new Mongo.Collection('documents')
