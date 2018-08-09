@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
+    <script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.6.2/www/src/brython.js">
+    </script>
     <title>Copad - Collaborative Code Pad</title>
 
 </head>
@@ -23,7 +25,6 @@
         </div>
     </nav>
     {{> main}}
-
 </body>
 
 <template name="main">
@@ -44,7 +45,17 @@
     <div id="list">
         {{#each documents}} {{> docItem}} {{/each}}
     </div>
-    <button class="btn green darken-2 newcode">New Codespace</button>
+    <div class="row" style="margin-bottom: 0px;">
+        <div class="col s3">
+            <button class="btn green darken-2 newcode">New Codespace</button>
+        </div>
+        <div class="col s3" >
+                <select style="margin: 0; padding: 0;" id="langSelect">
+                        <option value="Javascript" selected>Javascript</option>
+                        <option value="Python">Python</option>
+                </select>
+        </div>
+    </div>
 </template>
 
 <template name="docItem">
@@ -61,7 +72,8 @@
 </template>
 
 <template name="editor">
-    {{#with docid}}<div class="bordered"> {{> docTitle this}} {{> sharejsCM docid=this onRender=configCM id="editor"}}</div>
+    {{#with docid}}
+    <div class="bordered"> {{> docTitle this}} {{> sharejsCM docid=this onRender=configCM id="editor"}}</div>
     <button class="btn green darken-2" id="execute">Execute</button>
     <button class="btn green darken-2" id="clear">Clear Log</button>
     <iframe id="outputFrame" style="display: none" class="col s12"></iframe>

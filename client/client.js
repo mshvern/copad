@@ -1,3 +1,5 @@
+import Materialize from 'materialize-css'
+global.M = global.Materialize = Materialize
 // Define global editor so we don't have to address ShareJS API
 var codeEditor = null
 var currentlyEvaluating = false
@@ -11,7 +13,7 @@ Template.docList.helpers({
 Template.docList.events = {
   'click .newcode': function () {
     return Documents.insert({
-      title: 'untitled'
+      title: 'New Codespace'
     }, function (err, id) {
       if (!id) {
         return
@@ -37,6 +39,7 @@ Template.docItem.events = {
   },
   'click .deletecode': function (e) {
     e.preventDefault()
+    Session.set('document', undefined)
     return Documents.remove(this._id)
   }
 }
@@ -80,23 +83,49 @@ Template.editor.events = {
     let script = frameDocument.createElement('script')
     let outputElement = frameDocument.createElement('div')
     outputElement.id = 'outputDiv'
+    if (document.querySelector('#langSelect').value.toLowerCase() === 'javascript') {
+      script.innerHTML = `setTimeout(() => {
+        (function executeCodeFromInneriFrame () {
+          try {
+            let outputDiv = document.querySelector('#outputDiv')
+            outputDiv.innerHTML = ''
+            let startTime = Date.now()
+            console.log = function (message) {
+              let executionTime = Date.now() - startTime
+              outputDiv.innerHTML = '<p>(' + executionTime + ' ms): ' + message + '</p>' + outputDiv.innerHTML
+            }
+            console.error = console.debug = console.info = console.log
+            ` + codeEditor.getValue() + `
+          } catch (error) {
+            console.error(error)
+          }
+        })()
+      }, 0)`
+    } else if (document.querySelector('#langSelect').value.toLowerCase() === 'python') {
+      script.type = 'text/python3'
+      script.innerHTML = `\n
+from browser import document
+document['outputDiv'].innerHTML = ''
+def new_print(args):
+  document['outputDiv'].innerHTML = '<p>(log): ' + args + '</p>' + document['outputDiv'].innerHTML
 
-    script.innerHTML = `setTimeout(()=>{(function executeCodeFromInneriFrame () { \n
-      let outputDiv = document.querySelector('#outputDiv')
-      outputDiv.innerHTML = ''
-      let startTime = Date.now()
-      console.log = function (message) {
-        let executionTime = Date.now() - startTime
-        outputDiv.innerHTML = '<p>(' + executionTime + ' ms): ' + message + '</p>' + outputDiv.innerHTML
-      }
-    console.error = console.debug = console.info = console.log \n` + codeEditor.getValue() + `})()}, 0)`
+print = new_print \n` + codeEditor.getValue()
+      // <script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.6.2/www/src/brython.js">
+      let dependency = frameDocument.createElement('script')
+      dependency.type = 'text/javascript'
+      dependency.src = 'https://cdn.rawgit.com/brython-dev/brython/3.6.2/www/src/brython.js'
+      let executor = frameDocument.createElement('script')
+      executor.innerHTML = `setTimeout(()=>{brython()}, 1)`
+      frameDocument.body.appendChild(dependency)
+      frameDocument.body.appendChild(executor)
+    }
 
     frameDocument.body.appendChild(outputElement)
     frameDocument.body.appendChild(script)
     let outputDiv = document.querySelector('#outputDiv')
-    //outputDiv.innerHTML = '<p class="red">Evaluating...</p>'
+    // outputDiv.innerHTML = '<p class="red">Evaluating...</p>'
     setTimeout(() => {
-      //outputDiv.innerHTML = ''
+      // outputDiv.innerHTML = ''
       if (!Outputs.findOne()) {
         Outputs.insert({content: outputElement.innerHTML})
       } else {
@@ -120,7 +149,7 @@ Template.editor.helpers({
       cm.setOption('lineNumbers', true)
       cm.setOption('lineWrapping', true)
       cm.setOption('smartIndent', true)
-      cm.setOption('mode', 'javascript')
+      cm.setOption('mode', document.querySelector('#langSelect').value.toLowerCase())
       cm.setOption('theme', 'monokai')
       return cm.setOption('indentWithTabs', true)
     }
@@ -128,4 +157,14 @@ Template.editor.helpers({
   output () {
     return Outputs.findOne() ? Outputs.findOne().content : 'this is wrong'
   }
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('select')
+  var instances = M.FormSelect.init(elems)
+  document.querySelector('#langSelect').addEventListener('change', () => {
+    if (codeEditor) {
+      codeEditor.setOption('mode', document.querySelector('#langSelect').value.toLowerCase())
+    }
+  })
 })
