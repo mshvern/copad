@@ -1,63 +1,31 @@
 # Copad - Collaborative Coding Environment 
 > Copad aims to provide you with an easy way to collaboratively work on code and execute it right in your browser. The most popular use cases are tech interviews and teaching. 
 
+![Copad](https://scontent-frt3-2.xx.fbcdn.net/v/t1.15752-9/38887162_1916664251966763_3642131442374279168_n.png?_nc_cat=0&oh=29ce05a5393a3bb1a93a9cab33232126&oe=5BCC35AB)
+
 With Copad, you can easily launch a local webpage for internal use between you and your coworkers/interviewee/students. The application has a built in editor with syntax highlight and indentation (CodeMirror) and executes code in your browser through an iframe (Brython is used for Python code).
 
-![](header.png)
+
 
 ## Installation
 You can either install Docker (recommended) or install all the dependencies (MeteorJS + all the needed packages)
 
-## Usage example
+## Docker
+If you already have Docker installed, simply execute `docker run -d mshvern/copad@latest -p 3000:80` and that's it! When the docker finishes downloading and launching Copad, you will be able to access your Copad at `localhost`. 
+If you don't have a public IP Address, I recommend using **ngrok** to acquire one. It's completely free, works like a charm, easy to set up, and an awesome piece of software in general. 
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
+## Manual Setup
+For a manual setup to work, you need to have Meteor downloaded and added to your PATH. After that, clone the repo and navigate into its root and run `meteor npm install` and `meteor`, after that you'll be able to access Copad at `localhost:3000`
 
 ## Release History
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
+* 0.3.1
+    * Cleaned up and published at Docker Hub
+* 0.3.0
+    * ADD: Python syntax highlighting and executing code through an iFrame (with Brython) added. 
 * 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+    * ADD: Executing Javascript through an iFrame
 * 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
+    * ADD: Javascript syntax highlighting and `monokai` editor theme added
 * 0.0.1
-    * Work in progress
-
-## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+    * General functionality, not executing any code yet
