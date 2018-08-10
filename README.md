@@ -17,6 +17,7 @@ If you already have Docker installed, simply execute
 
 `docker run -d -p 80:3000 mshvern/copad` 
 
+Download and extraction may take a bit of time, but when you've already pulled the image, you'll be able run it with just a single line `docker run -d -p 80:3000 mshvern/copad` and this will almost instantly launch Copad. 
 And that's it! When the docker finishes downloading and launching Copad, you will be able to access your Copad at `localhost`. 
 If you don't have a public IP Address, I recommend using **ngrok** to acquire one. It's completely free, works like a charm, easy to set up, and an awesome piece of software in general. 
 
