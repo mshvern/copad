@@ -11,7 +11,13 @@ With Copad, you can easily launch a local webpage for internal use between you a
 You can either install Docker (recommended) or install all the dependencies (MeteorJS + all the needed packages)
 
 ## Docker
-If you already have Docker installed, simply execute `docker run -d mshvern/copad@latest -p 3000:80` and that's it! When the docker finishes downloading and launching Copad, you will be able to access your Copad at `localhost`. 
+If you already have Docker installed, simply execute 
+
+`docker pull mshvern/copad`
+
+`docker run -d -p 80:3000 mshvern/copad` 
+
+And that's it! When the docker finishes downloading and launching Copad, you will be able to access your Copad at `localhost`. 
 If you don't have a public IP Address, I recommend using **ngrok** to acquire one. It's completely free, works like a charm, easy to set up, and an awesome piece of software in general. 
 
 ## Manual Setup
