@@ -103,13 +103,22 @@ Template.editor.events = {
       }, 0)`
     } else if (document.querySelector('#langSelect').value.toLowerCase() === 'python') {
       script.type = 'text/python3'
+      let indentedCode = codeEditor.getValue().replace(/(^|\n)/g, '$1  ')
       script.innerHTML = `\n
+
 from browser import document
 document['outputDiv'].innerHTML = ''
-def new_print(args):
-  document['outputDiv'].innerHTML = '<p>(log): ' + args + '</p>' + document['outputDiv'].innerHTML
+def new_print(*args):
+  new_line = ""
+  for arg in args:
+    new_line += str(arg) + " "
+  document['outputDiv'].innerHTML = '<p>(log): ' + new_line + '</p>' + document['outputDiv'].innerHTML
 
-print = new_print \n` + codeEditor.getValue()
+print = new_print 
+try:\n` + indentedCode + `\n 
+except Exception as e:
+  print("Something's wrong: ", e)
+      \n`
       // <script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.6.2/www/src/brython.js">
       let dependency = frameDocument.createElement('script')
       dependency.type = 'text/javascript'
